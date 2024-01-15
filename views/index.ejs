@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+<h1>Colors</h1>
+<% for (const [language, colors] of Object.entries(lang_colors)) { %>
+  <h2>Learn the colors in <%= language %>!</h2>
+  <div class="colors">
+    <% colors.forEach(color => { %>
+      <div class="color-div c<%= colors.indexOf(color) + 1 %>">
+        <h2 class="color-title"><%= color %></h2>
+      </div>
+    <% }); %>
+  </div>
+<% } %>
+<%- include('partials/footer.ejs') %>
